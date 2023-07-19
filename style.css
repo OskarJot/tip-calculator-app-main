@@ -1,0 +1,48 @@
+body {
+	background-color: #aef4ff;
+}
+
+.title {
+	display: block;
+	width: 200px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.splitter-main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin: 50px 200px 100px 200px;
+	height: 500px;
+	border-radius: 30px;
+	background-color: #fff;
+}
+
+.splitter-param {
+	display: block;
+	margin: 10px 0px 10px 10px;
+	border-radius: 30px;
+	background-color: red;
+}
+
+.splitter-score {
+	display: block;
+	margin: 10px 10px 0px 10px;
+	border-radius: 30px;
+	background-color: yellow;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
