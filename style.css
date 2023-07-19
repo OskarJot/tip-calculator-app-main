@@ -39,6 +39,11 @@ body {
 	background-color: yellow;
 }
 
+.splitter-score-col {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 .attribution {
 	font-size: 11px;
 	text-align: center;
