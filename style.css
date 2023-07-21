@@ -1,9 +1,9 @@
 body {
 	background-color: #aef4ff;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .title {
-	display: block;
 	width: 200px;
 	text-transform: uppercase;
 	text-align: center;
@@ -26,15 +26,48 @@ body {
 }
 
 .splitter-param {
-	display: block;
-	margin: 10px 0px 10px 10px;
+	display: grid;
+	grid-template-rows: 1fr 2fr 1fr;
+	margin: 30px 0px 30px 30px;
 	border-radius: 30px;
 	background-color: red;
 }
 
+.splitter-param-bill {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.splitter-param-tip {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 2fr;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.splitter-param-tip-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	grid-template-rows: 1fr 1fr;
+}
+
+.splitter-param-people {
+	display: grid;
+	grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3];
+	grid-template-rows: [row-1] 1fr [row-2] 1fr;
+}
+
+.peopleValue {
+	grid-column-start: col-1;
+	grid-column-end: col-3;
+}
+
 .splitter-score {
 	display: block;
-	margin: 10px 10px 0px 10px;
+	margin: 30px 30px 30px 0px;
 	border-radius: 30px;
 	background-color: yellow;
 }
@@ -42,6 +75,13 @@ body {
 .splitter-score-col {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+.button-tip {
+	background-color: hsl(183, 100%, 15%);
+}
+.button-tip.clicked {
+	background-color: hsl(172, 67%, 45%);
 }
 
 .attribution {
