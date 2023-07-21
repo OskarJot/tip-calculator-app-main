@@ -4,17 +4,23 @@ const billValue = document.querySelector('.billValue');
 const buttonTip = document.querySelectorAll('.button-tip');
 const numPeople = document.querySelector('.peopleValue');
 
-buttonTip.forEach((button) => {
-	button.addEventListener('click', function () {
-		console.log(button.textContent);
-		button.classList.contains('clicked')
-			? button.classList.remove('clicked')
-			: button.classList.add('clicked');
+function toogleClass(elem, className) {
+	if (elem.classList.contains(className)) {
+		return;
+	}
+	const siblings = [...buttonTip];
+	siblings.forEach((sibling) => {
+		sibling.classList.remove(className);
 	});
-});
+	elem.classList.add(className);
+}
 
 function getValueBill() {
 	console.log(billValue.value);
+}
+
+function getValueTip(valueTip) {
+	console.log(valueTip);
 }
 
 function getValuePeople() {
@@ -23,3 +29,9 @@ function getValuePeople() {
 
 billValue.addEventListener('keyup', getValueBill);
 numPeople.addEventListener('keyup', getValuePeople);
+buttonTip.forEach((button) => {
+	button.addEventListener('click', () => {
+		toogleClass(button, 'clicked');
+		getValueTip(button.innerHTML);
+	});
+});

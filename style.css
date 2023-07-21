@@ -20,7 +20,6 @@ body {
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 	margin: 50px 200px 100px 200px;
-	height: 500px;
 	border-radius: 30px;
 	background-color: #fff;
 }
