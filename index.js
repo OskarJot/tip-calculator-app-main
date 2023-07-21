@@ -5,6 +5,10 @@ const buttonTip = document.querySelectorAll('.button-tip');
 const numPeople = document.querySelector('.peopleValue');
 
 function toogleClass(elem, className) {
+	if (elem.classList.contains(className)) {
+		return;
+	}
+
 	const siblings = [...buttonTip];
 	siblings.forEach((sibling) => {
 		sibling.classList.remove(className);
