@@ -9,6 +9,7 @@ let Total;
 const billValue = document.querySelector('.billValue');
 const buttonTip = document.querySelectorAll('.button-tip');
 const numPeople = document.querySelector('.peopleValue');
+const alertMsg = document.querySelector('.alert');
 
 function toogleClass(elem, className) {
 	if (elem.classList.contains(className)) {
@@ -35,6 +36,11 @@ function getValueTip(valueTip) {
 
 function getValuePeople() {
 	numberOfPeople = numPeople.value * 1;
+	if (numberOfPeople > 0) {
+		alertMsg.classList.remove('alert');
+		alertMsg.classList.add('noalert');
+		numPeople.classList.add('noalert');
+	}
 	console.log(numberOfPeople);
 	splitterTip(billCost, tipLevel, numberOfPeople);
 }

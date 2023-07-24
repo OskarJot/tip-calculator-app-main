@@ -29,7 +29,6 @@ body {
 	grid-template-rows: 1fr 2fr 1fr;
 	margin: 30px 0px 30px 30px;
 	border-radius: 30px;
-	background-color: red;
 }
 
 .splitter-param-bill {
@@ -62,6 +61,16 @@ body {
 .peopleValue {
 	grid-column-start: col-1;
 	grid-column-end: col-3;
+	border-color: red;
+}
+
+.alert {
+	color: red;
+}
+
+.noalert {
+	color: white;
+	border-color: white;
 }
 
 .splitter-score {
