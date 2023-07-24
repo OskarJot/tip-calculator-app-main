@@ -1,5 +1,11 @@
 console.log('Hello');
 
+let billCost;
+let tipLevel;
+let numberOfPeople;
+let tipAmount;
+let Total;
+
 const billValue = document.querySelector('.billValue');
 const buttonTip = document.querySelectorAll('.button-tip');
 const numPeople = document.querySelector('.peopleValue');
@@ -18,15 +24,19 @@ function toogleClass(elem, className) {
 }
 
 function getValueBill() {
-	console.log(billValue.value);
+	billCost = billValue.value * 1;
+	console.log(billCost);
 }
 
 function getValueTip(valueTip) {
-	console.log(valueTip.value);
+	tipLevel = valueTip.value * 1;
+	console.log(tipLevel);
 }
 
 function getValuePeople() {
-	console.log(numPeople.value);
+	numberOfPeople = numPeople.value * 1;
+	console.log(numberOfPeople);
+	splitterTip(billCost, tipLevel, numberOfPeople);
 }
 
 billValue.addEventListener('keyup', getValueBill);
@@ -40,3 +50,10 @@ buttonTip.forEach((button) => {
 		getValueTip(button);
 	});
 });
+
+function splitterTip(billCost, tipLevel, numberOfPeople) {
+	Total = billCost + billCost * (tipLevel / 100);
+	console.log(Total);
+	tipAmount = (billCost * (tipLevel / 100)) / numberOfPeople;
+	console.log(tipAmount);
+}
