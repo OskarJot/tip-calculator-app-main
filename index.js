@@ -22,7 +22,7 @@ function getValueBill() {
 }
 
 function getValueTip(valueTip) {
-	console.log(valueTip);
+	console.log(valueTip.value);
 }
 
 function getValuePeople() {
@@ -34,6 +34,9 @@ numPeople.addEventListener('keyup', getValuePeople);
 buttonTip.forEach((button) => {
 	button.addEventListener('click', () => {
 		toogleClass(button, 'clicked');
-		getValueTip(button.innerHTML);
+		getValueTip(button);
+	});
+	button.addEventListener('keyup', () => {
+		getValueTip(button);
 	});
 });
