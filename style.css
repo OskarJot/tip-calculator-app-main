@@ -69,7 +69,7 @@ body {
 }
 
 .noalert {
-	color: white;
+	color: black;
 	border-color: white;
 }
 
@@ -77,19 +77,61 @@ body {
 	display: block;
 	margin: 30px 30px 30px 0px;
 	border-radius: 30px;
-	background-color: yellow;
+	background-color: hsl(183, 100%, 15%);
 }
 
 .splitter-score-col {
 	display: grid;
+	margin: 30px;
+	align-items: center;
+	text-align: left;
 	grid-template-columns: 1fr 1fr;
+}
+
+.splitter-score-col-tip {
+	text-align: right;
+}
+
+.splitter-score-col-tip-price {
+	height: max-content;
+	color: hsl(172, 67%, 45%);
+	font-weight: bold;
+}
+
+.splitter-score-col-total {
+	text-align: right;
+}
+
+.splitter-score-col-total-price {
+	height: max-content;
+	color: hsl(172, 67%, 45%);
+	font-weight: bold;
+}
+
+.splitter-score-footer {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 100px;
+	width: auto;
+}
+
+.button-reset {
+	width: 100%;
+	height: 50px;
+	background-color: #aef4ff;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .button-tip {
 	background-color: hsl(183, 100%, 15%);
+	color: hsl(0, 0%, 100%);
+	font-weight: bold;
 }
 .button-tip.clicked {
 	background-color: hsl(172, 67%, 45%);
+	color: hsl(183, 100%, 15%);
+	font-weight: bold;
 }
 
 .attribution {
