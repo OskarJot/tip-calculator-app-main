@@ -10,6 +10,8 @@ const billValue = document.querySelector('.billValue');
 const buttonTip = document.querySelectorAll('.button-tip');
 const numPeople = document.querySelector('.peopleValue');
 const alertMsg = document.querySelector('.alert');
+const tipPrice = document.querySelector('.splitter-score-col-tip-price');
+const totalPrice = document.querySelector('.splitter-score-col-total-price');
 
 function toogleClass(elem, className) {
 	if (elem.classList.contains(className)) {
@@ -51,15 +53,17 @@ buttonTip.forEach((button) => {
 	button.addEventListener('click', () => {
 		toogleClass(button, 'clicked');
 		getValueTip(button);
+		splitterTip();
 	});
 	button.addEventListener('keyup', () => {
 		getValueTip(button);
+		splitterTip();
 	});
 });
 
 function splitterTip(billCost, tipLevel, numberOfPeople) {
-	Total = billCost + billCost * (tipLevel / 100);
-	console.log(Total);
+	Total = (billCost + billCost * (tipLevel / 100)) / numberOfPeople;
+	totalPrice.innerHTML = Total;
 	tipAmount = (billCost * (tipLevel / 100)) / numberOfPeople;
-	console.log(tipAmount);
+	tipPrice.innerHTML = tipAmount;
 }
