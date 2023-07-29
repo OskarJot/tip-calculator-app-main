@@ -18,34 +18,34 @@
 </head>
 
 <body>
-  <div class="title">
+  <div class="titleSplitter">
     spli<br>tter
   </div>
 
-  <div class="splitter-main">
-    <div class="splitter-param">
-      <div class="splitter-param-bill">
-        <p>Bill</p>
-        <input class="billValue" type="text">
+  <div class="splitter_block">
+    <div class="splitter_block--param">
+      <div class="splitter_input--bill">
+        <label for="bill" class="splitter_title">Bill</label>
+        <input class="spilitter_input--billValue" type="text">
       </div>
-      <div class="splitter-param-tip">
-        <p>Select Tip %</p>
+      <div class="splitter_block--param--tip">
+        <label for="tip" class="splitter_title">Select Tip %</label>
         <div class="splitter-param-tip-buttons">
-          <button class="button-tip" value="5">5%</button>
-          <button class="button-tip" value="10">10%</button>
-          <button class="button-tip" value="15">15%</button>
-          <button class="button-tip" value="20">20%</button>
-          <button class="button-tip" value="50">50%</button>
-          <input type="number" class="button-tip"></input>
+          <button class="button--tip" value="5">5%</button>
+          <button class="button--tip" value="10">10%</button>
+          <button class="button--tip" value="15">15%</button>
+          <button class="button--tip" value="20">20%</button>
+          <button class="button--tip" value="50">50%</button>
+          <input type="number" class="button--tip button--custom"></input>
         </div>
       </div>
       <div class="splitter-param-people">
-        <p>Number of People</p>
-        <p class="alert">Can't be zero</p>
+        <label for="numberOfPeople" class="splitter_title">Number of People</label>
+        <label for="alert" class="splitter_title--alert">Can't be zero</label>
         <input class="peopleValue" type="text" value="0">
       </div>
     </div>
-    <div class="splitter-score">
+    <div class="splitter_block--score">
       <div class="splitter-score-col">
         <div class="splitter-score-col-title">
           <p>Tip Anount</p>

@@ -6,10 +6,10 @@ let numberOfPeople;
 let tipAmount;
 let Total;
 
-const billValue = document.querySelector('.billValue');
-const buttonTip = document.querySelectorAll('.button-tip');
+const billValue = document.querySelector('.spilitter_input--billValue');
+const buttonTip = document.querySelectorAll('.button--tip');
 const numPeople = document.querySelector('.peopleValue');
-const alertMsg = document.querySelector('.alert');
+const alertMsg = document.querySelector('.splitter_title--alert');
 const tipPrice = document.querySelector('.splitter-score-col-tip-price');
 const totalPrice = document.querySelector('.splitter-score-col-total-price');
 
@@ -39,9 +39,10 @@ function getValueTip(valueTip) {
 function getValuePeople() {
 	numberOfPeople = numPeople.value * 1;
 	if (numberOfPeople > 0) {
-		alertMsg.classList.remove('alert');
+		alertMsg.classList.remove('splitter_title--alert');
 		alertMsg.classList.add('noalert');
 		numPeople.classList.add('noalert');
+		alertMsg.innerHTML = '';
 	}
 	console.log(numberOfPeople);
 	splitterTip(billCost, tipLevel, numberOfPeople);
