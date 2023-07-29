@@ -128,7 +128,7 @@ body {
 	color: hsl(0, 0%, 100%);
 	font-weight: bold;
 }
-.button-tip.clicked {
+.button--tip.clicked {
 	background-color: hsl(172, 67%, 45%);
 	color: hsl(183, 100%, 15%);
 	font-weight: bold;
